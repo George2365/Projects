@@ -15,12 +15,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Frame extends JFrame {
-
+Image icon;
     Frame(){
         ElevatorPanel elevatorPanel = new ElevatorPanel();
-
+        icon  = new ImageIcon("Elevator\\Resources\\elevatorIcon.png").getImage();
         this.setSize(elevatorPanel.PANEL_WIDTH, elevatorPanel.PANEL_HEIGHT);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setIconImage(icon);
         this.setTitle("Elevator");
         this.setResizable(false);
         this.setLocationRelativeTo(null);
@@ -30,6 +31,7 @@ public class Frame extends JFrame {
     }
 
 }
+
 
 **********************************************************************************************************
                                JPanel(class) and Buttons(each is a subclass)
